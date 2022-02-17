@@ -1,5 +1,25 @@
 .class {
-    width: 100px;
-    height: 100px;
-    background-color: red;
+    width: 375px;
+    /* height: 100px; */
+    background-color:lightsteelblue;
+    margin: 10px;
+    padding: 10px;
+    font-family:'Cambria';
+}
+
+#title {
+    font-weight:bold;
+}
+
+#department {
+    font-style: italic;
+}
+
+#description {
+    font-size:smaller;
+}
+
+#instructor_name {
+    font-size:small;
+    display: inline;
 }

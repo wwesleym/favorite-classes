@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Class from '../Class/Class';
+import ClassGraphQL from '../Class/ClassGraphQL';
+import { Helmet } from 'react-helmet'
 import "./Home.css"
 
 function Home(props) {
@@ -27,7 +29,10 @@ function Home(props) {
 
     return (
         <div>
-            <h1>hello world</h1>
+            <Helmet>
+                <title>wesley's classes</title>
+            </Helmet>
+            <h1>wesley's favorite classes</h1>
             <form onSubmit={handleSubmit}>
                 <label>Add Favorite Class</label>
                 <input type="text" value={value} onChange={handleChange}></input>
@@ -36,6 +41,11 @@ function Home(props) {
             <div className="my-classes">
                 {favoriteClasses.map((favClass) => 
                     <Class name={favClass} key={favClass}></Class>
+                )}
+            </div>
+            <div className="my-classes">
+                {favoriteClasses.map((favClass) => 
+                    <ClassGraphQL name={favClass} key={favClass}></ClassGraphQL>
                 )}
             </div>
         </div>
